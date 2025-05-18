@@ -21,12 +21,13 @@ Fetch relevant code from CodeCommit and diagnose bugs.
 
 Key Architecture:
 
-graph TD  
+```mermaid
+graph TD;
     A[Log Analyzer] -->|Infra Issue| B[Resolution Notifier]  
     A -->|Code Issue| C[Code Analyzer]  
     C --> D[Resolution Notifier]  
     C -->|Critical| E[Auto-PR Creator]  
-
+```
 
 Implementation Notes
 AWS Permissions:
